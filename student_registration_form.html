@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student registration form</title>
+</head>
+<style>
+
+    table{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <form action="./student_registration_form.html" method="psot">
+
+<table border="2px">
+<tr><th colspan="2">student Registration Form</th></tr>
+<tr><th>Name</th><td><input type="text" name="name"></td></tr>
+<tr><th>Father Name</th><td><input type="text" name="father_name"></td></tr>
+<tr><th>Post Address</th><td><textare  name="post_address"></td></tr>
+<tr><th>Personal Address</th><td><textarea name="personal_address"></td></textarea></td></tr>
+<tr>
+    <th>Sex</th>
+    <td>Male<input type="radio" name="gender" value="male">
+    Female<input type="radio" name="gender" value="female"></td>
+</tr>
+<tr>
+    <th>City</th>
+    <td><select name="city" id="city" >
+        <option>select..</option>
+            <option>Ahmedabad</option>
+            <option>Suart</option>
+            <option>Vadodara</option>
+            <option>Anand</option>
+        </select></td>
+</tr>
+<tr>
+    <th>Course</th>
+    <td><select name="cource" id="cource" >
+        <option>select..</option>
+            <option>A.I.</option>
+            <option>IOT</option>
+            <option>M.L.</option>
+            <option>Data Science</option>
+        </select></td>
+</tr>
+<tr>
+    <th>District</th>
+    <td><select name="district" id="district" >
+        <option>select..</option>
+            <option>Ahmedabad</option>
+            <option>Surat</option>
+            <option>Mehsana</option>
+            <option>Bharuch</option>
+        </select></td>
+</tr>
+<tr>
+    <th>state</th>
+    <td><select name="state" id="state" >
+        <option>select..</option>
+            <option>Gujarat</option>
+            <option>Maharashtra</option>
+            <option>Madhya pradesh</option>
+            <option>Uttar pradesh</option>
+        </select></td>
+</tr>
+<tr>
+
+    <th>Pincode</th>
+    <td><input type="text" name="pincode"></td>
+</tr>
+<tr>
+
+    <th>EmailId</th>
+    <td><input type="email" name="email"></td>
+</tr>
+<tr>
+
+    <th>DOB</th>
+    <td><input type="date" name="dob"></td>
+</tr>
+<tr>
+
+    <th>MobileNo</th>
+    <td><input type="text" name="mobileno"></td>
+</tr>
+
+<tr><td><input type="reset"></td><td><input type="submit"></td></tr>
+</table>
+
+
+        
+    </form>
+</body>
+</html>
