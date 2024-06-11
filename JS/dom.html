@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+#box{
+
+background-color: skyblue;
+height:100px;
+width:100px;
+
+}
+
+</style>
+
+</head>
+<body>
+    <button type="button" id="btn" >click it</button>
+    <div id="id"></div>
+
+    <div id="box">
+        TEXT
+    </div>
+    <!-- onclick="additem()" -->
+<script>
+    document.writeln("hello!")
+    let ele=document.getElementById("id")
+    let button=document.getElementById("btn");
+    function additem(){
+        ele.innerHTML+="<h1> This is h1 tag</h1>"
+ele.style.color="red8";
+        }
+// button.addEventListener("mouseenter",additem)  //events like click dblclicke mouseover etc......
+let box=document.getElementById("box")
+function changecolor(){
+    box.style.backgroundColor="red"
+}
+function changesize(){
+    box.style.height="150px";
+    box.style.width="150px";
+    box.style.fontSize="40px";
+}
+
+button.addEventListener("click",changecolor);
+button.addEventListener("dblclick",changesize);
+</script>
+</body>
+
+</html>
