@@ -6,22 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
 </head>
+<style>
+#data{
+    height:200px;
+    width:100%;
+
+}
+
+</style>
 
 <body>
-    <form action="./Form.html" method="post">
+    <form action="" method="post">
 
         <table>
             <tr>
                 <th>First Name:</th>
-                <td><input type="text" name="fisrtname" placeholder="Enter your First name"></td>
+                <td><input type="text" name="fisrtname" id="fname" placeholder="Enter your First name"></td>
             </tr>
             <tr>
                 <th>Last Name:</th>
-                <td><input type="text" name="lastname" placeholder="Enter your Last name"></td>
+                <td><input type="text" name="lastname" id="lname" placeholder="Enter your Last name"></td>
             </tr>
             <tr>
                 <th>Address:</th>
-                <td><textarea height="20" width="40" name="address" placeholder="Enter your Address"></textarea></td>
+                <td><textarea height="20" width="40" id="address" name="address" placeholder="Enter your Address"></textarea></td>
             </tr>
             <tr>
                 <th>City:</th>
@@ -35,30 +43,99 @@
             </tr>
             <tr>
                 <th>Gender:</th>
-                <td>Male<input type="radio" name="gender" value="male"></td>
-                <td>Female<input type="radio" name="gender" value="female"></td>
+                <td>Male<input type="radio" id="gender" name="gender" value="male"></td>
+                <td>Female<input type="radio" id="gender" name="gender" value="female"></td>
 </tr>
             <tr>
                 <th>Hobbies:</th>
-                <td>Games<input type="checkbox" name="games"></td>
-                <td>Music<input type="checkbox" name="music"></td>
-                <td>Book reading<input type="checkbox" name="book reading"></td>
+                <td>Games<input type="checkbox" value="games" name="games" id="games"></td>
+                <td>Music<input type="checkbox" value="music" name="music" id="music"></td>
+                <td>Bookreading<input type="checkbox" value="Bookreading" id="bookreading" name="bookreading"></td>
             </tr>
             <tr>
                 
                 <th>Email:</th>
-                <td><input type="email" name="email"></td>
+                <td><input type="email" id="email" name="email"></td>
                 </tr>
                 <tr>
-                    <th>Password:</th><td><input type="password" name="password"></td>
+                    <th>Password:</th><td><input type="password" id="password" name="password"></td>
                 </tr>
                     <tr>
-                        <td></td><td><input type="submit"></td>
+                        <td></td><td><input type="submit" id="submit"></td>
                     </tr>
         </table>
-
+<div id="data"></div>
 
     </form>
 </body>
+
+<script>
+    
+    let Fname=document.getElementById("fname");
+    let Lname=document.getElementById("lname");
+    let address=document.getElementById("address");
+    let city=document.getElementById("city");
+ let gender=document.getElementById("gender");
+    let games=document.getElementById("games");
+    let music=document.getElementById("music");
+    let bookreading=document.getElementById("bookreading");
+    let email=document.getElementById("email");
+    let password=document.getElementById("password");
+
+    let data=document.getElementById("data");
+
+    function dataprint(){
+        // print(); will give us printout
+     
+        //----------------------------------------------------------------
+     event.preventDefault();
+        console.log(Fname.value);
+        console.log(Lname.value);
+        console.log(address.value);
+        console.log(city.value);
+        console.log(gender.value);
+        console.log(games.value);
+        console.log(music.value);
+        console.log(bookreading.value);
+        console.log(email.value);
+        console.log(password.value);
+        
+
+        data.innerHTML+=`<table border="1" cellspacing="2" cellpadding="3">
+            <tr>
+                <td>fname</td>
+                <td>lname</td>
+                <td>address</td>
+                <td>city</td>
+                <td>gender</td>
+                <td>games</td>
+                <td>music</td>
+                <td>bookreading</td>
+                <td>email</td>
+                <td>password</td>
+                </tr>
+            <tr>
+                <td>${fname}</td>
+                <td>${lname}</td>
+                <td>${address}</td>
+                <td>${city}</td>
+                <td>${gender}</td>
+                <td>${games}</td>
+                <td>${music}</td>
+                <td>${bookreading}</td>
+                <td>${email}</td>
+                <td>${password}</td>
+                </tr>
+            
+            
+            </table>`
+
+        }
+
+    let submit=document.getElementById("submit");
+    submit.addEventListener("click",dataprint);
+
+</script>
+
 
 </html>
