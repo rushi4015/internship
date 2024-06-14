@@ -20,6 +20,7 @@ myobj2.name = "ansh patel"
 myobj2.nestedobj=[]
 console.log(myobj2,myobj)
 console.log(myobj.fun())
-console.log(">>>>>>",Object.values(myobj),Object.keys(myobj),Object.length(myobj))
+console.log(">>>>>>",Object.values(myobj),Object.keys(myobj),)
 // console.log(">>>>>>>", myobj.nestedobj.array[3], myobj.nestedobj.key1)
 // console.log(">>>>>>>", myobj.name, myobj["phone"],)
+// Object.length(myobj)
